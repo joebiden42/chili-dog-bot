@@ -23,7 +23,7 @@ client.on("message", async message => {
 		
 })
 .catch((err) => {
-	await client.send_message(client.get_channel('beg-dog-god'), 'i dont feel like answering, peasants')
+	client.send_message(client.get_channel('beg-dog-god'), 'i dont feel like answering, peasants')
 });
 
 client.login(process.env.BOT_TOKEN);
