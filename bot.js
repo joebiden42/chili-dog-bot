@@ -33,7 +33,7 @@ client.on("message", async message => {
         if (sr < 0) {
 	        message.channel.send("You lose " + Math.abs(sr) + " SR lol bot");
         } else {
-            message.channel.send("You gain " + sr + " SR despite yourself");
+            message.channel.send("You gain " + sr + " SR somehow");
         }
     }
 		
