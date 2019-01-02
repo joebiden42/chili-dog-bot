@@ -16,7 +16,8 @@ client.on("message", async message => {
 	if (command === "commands") {
         message.channel.send("**List of tricks:**\n"
                              + "\t!ely\n"
-                             + "\t!fetusdeletus\n");
+                             + "\t!fetusdeletus\n"
+                             + "\t!comp\n");
 	}
 
 	if (command === "ely") {
@@ -26,6 +27,15 @@ client.on("message", async message => {
 	if (command === "fetusdeletus") {
 		message.channel.send("https://imgur.com/a/8EQqePU");
 	}
+	
+	if (command === "comp") {
+        const sr = Math.random() * 100 - 50;
+        if (sr < 0) {
+		    message.channel.send("You lose " + sr + " SR lol bot");
+        } else {
+            message.channel.send("You gain " + sr + " SR despite yourself");
+        }
+    }
 		
 });
 
