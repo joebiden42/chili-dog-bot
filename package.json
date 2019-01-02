@@ -1,0 +1,12 @@
+{
+	"name": "doggod",
+	"version": "1.69.420",
+	"description": "all hail",
+	"main": "bot.js",
+	"author": "Joe Biden",
+	"dependencies": {
+		"discord.io": "^2.5.3",
+		"discord.js": "^11.4.2",
+		"winston": "^3.1.0"
+	}
+}
