@@ -12,6 +12,12 @@ client.on("message", async message => {
 
 	const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 	const command = args.shift().toLowerCase();
+	
+	if (command === "commands") {
+        message.channel.send("List of tricks:\n"
+                             + "!ely\n"
+                             + "!fetusdeletus\n");
+	}
 
 	if (command === "ely") {
 		message.channel.send("fuckin egirls, man\nhttps://imgur.com/a/rO4ARa9");
