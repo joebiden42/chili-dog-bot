@@ -15,8 +15,8 @@ client.on("message", async message => {
 	
 	if (command === "commands") {
         message.channel.send("List of tricks:\n"
-                             + "!ely\n"
-                             + "!fetusdeletus\n");
+                             + "\t!ely\n"
+                             + "\t!fetusdeletus\n");
 	}
 
 	if (command === "ely") {
