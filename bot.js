@@ -14,8 +14,13 @@ client.on("message", async message => {
 	const command = args.shift().toLowerCase();
 
 	if (command === "ely") {
-		message.channel.send("https://imgur.com/a/rO4ARa9");
+		message.channel.send("fuckin egirls, man\nhttps://imgur.com/a/rO4ARa9");
 	}
+	
+	if (command === "fetusdeletus") {
+		message.channel.send("https://imgur.com/a/8EQqePU");
+	}
+		
 });
 
 client.login(process.env.BOT_TOKEN);
