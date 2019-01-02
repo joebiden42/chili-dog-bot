@@ -14,7 +14,7 @@ client.on("message", async message => {
 	const command = args.shift().toLowerCase();
 	
 	if (command === "commands") {
-        message.channel.send("*List of tricks:*\n"
+        message.channel.send("**List of tricks:**\n"
                              + "\t!ely\n"
                              + "\t!fetusdeletus\n");
 	}
