@@ -4,6 +4,9 @@
 	"description": "all hail",
 	"main": "bot.js",
 	"author": "Joe Biden",
+	"scripts": {
+		"start": "node bot.js"
+	},
 	"dependencies": {
 		"discord.io": "^2.5.3",
 		"discord.js": "^11.4.2",
