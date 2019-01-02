@@ -29,9 +29,9 @@ client.on("message", async message => {
 	}
 	
 	if (command === "comp") {
-        const sr = Math.random() * 100 - 50;
+        const sr = Math.round(Math.random() * 100 - 50);
         if (sr < 0) {
-		    message.channel.send("You lose " + sr + " SR lol bot");
+	        message.channel.send("You lose " + Math.abs(sr) + " SR lol bot");
         } else {
             message.channel.send("You gain " + sr + " SR despite yourself");
         }
