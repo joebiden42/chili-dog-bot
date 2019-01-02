@@ -21,9 +21,6 @@ client.on("message", async message => {
 		message.channel.send("https://imgur.com/a/8EQqePU");
 	}
 		
-})
-.catch((err) => {
-	client.send_message(client.get_channel('beg-dog-god'), 'i dont feel like answering, peasants')
 });
 
 client.login(process.env.BOT_TOKEN);
