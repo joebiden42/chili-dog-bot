@@ -4,7 +4,7 @@ const config = require("./config.json")
 var dict = [];
 const users = guild.members;
 
-if (users !=== null) {
+if (users !== null) {
     users.forEach(function(entry) {
         dict.push({
             key:   entry["user"]["username"],
