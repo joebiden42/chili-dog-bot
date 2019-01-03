@@ -1,8 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json")
-var dict = [];
-const users = guild.members;
+
+/*var dict = [];
+const users = message.guild.members;
 
 if (users !== null) {
     users.forEach(function(entry) {
@@ -11,7 +12,7 @@ if (users !== null) {
             value: -1
         });
     });
-}
+}*/
 
 client.on("ready", () => {
 	client.user.setActivity(`Bow. (wow)`);
@@ -40,7 +41,7 @@ client.on("message", async message => {
 	}
 	
 	if (command === "comp") {
-		if (dict[message.member.user.username] === -1) {
+	    /*if (dict[message.member.user.username] === -1) {
             // placement
             const sr = Math.round(Math.random() * 5000);
             dict[message.member.user.username] = sr
@@ -53,16 +54,16 @@ client.on("message", async message => {
             else if (sr >= 1500) rank = "silver";
             else rank = "bronze";
             message.channel.send(`You've placed in ${rank} with ${sr} SR`);
-        } else {
+        } else {*/
             const sr = Math.round(Math.random() * 100 - 50);
-            const newSr = dict[message.member.user.username] + sr;
-            dict[message.member.user.username] = newSr;
+            // const newSr = dict[message.member.user.username] + sr;
+            // dict[message.member.user.username] = newSr;
             if (sr < 0) {
-	            message.channel.send("You lose " + Math.abs(sr) + " SR lol bot. You are now at " + newSr);
+	            message.channel.send("You lose " + Math.abs(sr) + " SR lol bot"); //. You are now at " + newSr);
             } else {
-                message.channel.send("You gain " + sr + " SR somehow. You are now at " + newSr);
+                message.channel.send("You gain " + sr + " SR somehow"); //. You are now at " + newSr);
             }
-        }
+        //}
     }
 		
 });
