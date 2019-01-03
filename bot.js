@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json")
 var dict = [];
-const users = guild.members
+const users = guild.members;
 
 if (users !=== null) {
     users.forEach(function(entry) {
