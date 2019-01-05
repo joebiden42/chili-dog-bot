@@ -20,6 +20,16 @@ client.on("ready", () => {
 
 client.on("message", async message => {
 	if (message.author.bot) return;
+
+    if (message.member.user.tag === "Blackniss#8574") {
+        console.log("target in sight");
+        if (Math.round(Math.random()) * 100 === 69) {
+            console.log("take the shot");
+            message.channel.send("@Blackniss#8574 slut");
+            return;
+        }
+    }
+
 	if (message.content.indexOf(config.prefix) !== 0) return;
 
 	const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
@@ -30,14 +40,17 @@ client.on("message", async message => {
                              + "\t!ely\n"
                              + "\t!fetusdeletus\n"
                              + "\t!comp\n");
+        return;
 	}
 
 	if (command === "ely") {
 		message.channel.send("fuckin egirls, man\nhttps://imgur.com/a/rO4ARa9");
+        return;
 	}
 	
 	if (command === "fetusdeletus") {
 		message.channel.send("https://imgur.com/a/8EQqePU");
+        return;
 	}
 	
 	if (command === "comp") {
@@ -64,6 +77,7 @@ client.on("message", async message => {
                 message.channel.send("You gain " + sr + " SR somehow"); //. You are now at " + newSr);
             }
         //}
+        return;
     }
 		
 });
