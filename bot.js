@@ -16,7 +16,7 @@ const birthdays = {
     psy: "Happy birthday, @Psycholiptic#6360!",
     fez: "Happy birthday, @T-Fez#7603!",
     prl: "Happy birthday, @pearl#4165!",
-    joe: "Happy birthday, @<" + client.users.get("name", "JoeBiden#7874").id + ">!",
+    joe: "Happy birthday, <@346442977402683395>!",
     bam: "Happy birthday, @ы Bambata#4932!"
 };
 
