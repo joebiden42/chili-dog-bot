@@ -55,6 +55,8 @@ client.on("message", async message => {
     var today = new Date();
     var formattedDate = new Date(2000, date.getMonth(), date.getDate());
     var formattedToday = new Date(2000, today.getMonth(), today.getDate());
+    console.log(formattedDate.getTime() !== formattedToday.getTime());
+    console.log(formattedDate.getTime() + ", " + formattedToday.getTime());
     if (formattedDate.getTime() !== formattedToday.getTime()) {
         date = today;
         for (var key in birthdays) {
