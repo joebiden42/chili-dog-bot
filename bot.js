@@ -59,7 +59,7 @@ client.on("message", async message => {
 
         for (var key in birthdays) {
             console.log("key: " + key + "\ndate: " + formattedDate);
-            if (key === formattedDate) {
+            if (key.getTime() === formattedDate.getTime()) {
                 console.log("MATCH");
                 const channel = message.guild.channels.find(channel => channel.name === "chat");
                 console.log(channel);
