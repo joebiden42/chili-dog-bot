@@ -35,8 +35,9 @@ client.on("message", async message => {
 	const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 	const command = args.shift().toLowerCase();
 
-    if (command === "debug") {
-        Date d = new Date();
+    if (command === "debug" && message.member.user.tag === "JoeBiden#7874") {
+        console.log("i'm in");
+        var d = new Date();
         message.channel.send(d.getDate());
         return;
     }
