@@ -55,12 +55,13 @@ client.on("message", async message => {
     var today = new Date();
     var formattedDate = new Date(2000, date.getMonth(), date.getDate());
     var formattedToday = new Date(2000, today.getMonth(), today.getDate());
-    if (formattedDate !== formattedToday) {
+    if (formattedDate.getTime() !== formattedToday.getTime()) {
         date = today;
         for (var key in birthdays) {
             console.log(Date.parse(key));
             if (Date.parse(key) === formattedDate.getTime()) {
                 const channel = message.guild.channels.find(channel => channel.name === "chat");
+                console.log(birthdays[key]);
                 // channel.send(birthdays[key]);
             }
         }
