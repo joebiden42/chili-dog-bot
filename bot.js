@@ -53,20 +53,18 @@ client.on("message", async message => {
 
     // Listen I know this shouldn't run every message, I'll change it to amortized O(1) one day ok ok
     var today = new Date();
-    //if (date !== today) {
+    if (date !== today) {
         date = today;
         var formattedDate = new Date(2000, date.getMonth(), date.getDate());
 
         for (var key in birthdays) {
             console.log(Date.parse(key));
             if (Date.parse(key) === formattedDate.getTime()) {
-                console.log("MATCH");
                 const channel = message.guild.channels.find(channel => channel.name === "chat");
-                console.log(channel);
                 channel.send(birthdays[key]);
             }
         }
-    //}
+    }
 
 	if (message.content.indexOf(config.prefix) !== 0) return;
 
