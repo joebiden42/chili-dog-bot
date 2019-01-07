@@ -53,10 +53,10 @@ client.on("message", async message => {
 
     // Listen I know this shouldn't run every message, I'll change it to amortized O(1) one day ok ok
     var today = new Date();
-    if (date !== today) {
+    var formattedDate = new Date(2000, date.getMonth(), date.getDate());
+    var formattedToday = new Date(2000, today.getMonth(), today.getDate());
+    if (formattedDate !== formattedToday) {
         date = today;
-        var formattedDate = new Date(2000, date.getMonth(), date.getDate());
-
         for (var key in birthdays) {
             console.log(Date.parse(key));
             if (Date.parse(key) === formattedDate.getTime()) {
