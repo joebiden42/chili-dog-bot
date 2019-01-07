@@ -16,7 +16,7 @@ const birthdays = {
     psy: "Happy birthday, @Psycholiptic#6360!",
     fez: "Happy birthday, @T-Fez#7603!",
     prl: "Happy birthday, @pearl#4165!",
-    joe: "Happy birthday, @JoeBiden#7874!",
+    joe: "Happy birthday, @<" + client.users.get("name", "JoeBiden#7874").id + ">!",
     bam: "Happy birthday, @ы Bambata#4932!"
 };
 
@@ -31,6 +31,8 @@ if (users !== null) {
         });
     });
 }*/
+
+// client.users.get("name", "USERNAMEHERE").id;
 
 client.on("ready", () => {
 	client.user.setActivity(`Bow. (wow)`);
@@ -65,9 +67,6 @@ client.on("message", async message => {
 
     if (command === "debug" && message.member.user.tag === "JoeBiden#7874") {
         message.channel.send(date + "\n" + birthdays['joe']);
-        for (var key in birthdays) {
-            console.log(birthdays[key]);
-        }
         return;
     }
 	
