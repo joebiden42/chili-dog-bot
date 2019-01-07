@@ -11,13 +11,13 @@ const joe = new Date(2000, 1, 14);
 const bam = new Date(2000, 6, 4);
 
 const birthdays = {
-    blk: "Happy birthday, @Blackniss#8574!",
-    omg: "Happy birthday, @omgnoodles#6244!",
-    psy: "Happy birthday, @Psycholiptic#6360!",
-    fez: "Happy birthday, @T-Fez#7603!",
-    prl: "Happy birthday, @pearl#4165!",
+    blk: "Happy birthday, <@163692421845221376>!",
+    omg: "Happy birthday, <@210128801131134976>!",
+    psy: "Happy birthday, <@283349679809363969>!",
+    fez: "Happy birthday, <@194936061254828033>!",
+    prl: "Happy birthday, <@226457095224950784>!",
     joe: "Happy birthday, <@346442977402683395>!",
-    bam: "Happy birthday, @ы Bambata#4932!"
+    bam: "Happy birthday, <@99599122083889152>!"
 };
 
 /*var dict = [];
@@ -66,7 +66,7 @@ client.on("message", async message => {
 	const command = args.shift().toLowerCase();
 
     if (command === "debug" && message.member.user.tag === "JoeBiden#7874") {
-        message.channel.send(date + "\n" + birthdays['joe']);
+        message.channel.send(formattedDate + "\n" + fez);
         return;
     }
 	
