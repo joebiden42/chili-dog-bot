@@ -61,7 +61,7 @@ client.on("message", async message => {
             console.log(Date.parse(key));
             if (Date.parse(key) === formattedDate.getTime()) {
                 const channel = message.guild.channels.find(channel => channel.name === "chat");
-                channel.send(birthdays[key]);
+                // channel.send(birthdays[key]);
             }
         }
     }
@@ -72,7 +72,7 @@ client.on("message", async message => {
 	const command = args.shift().toLowerCase();
 
     if (command === "debug" && message.member.user.tag === "JoeBiden#7874") {
-        message.channel.send(formattedDate + "\n" + fez) + "\n";
+        message.channel.send(formattedDate + "\n" + formattedToday) + "\n";
         return;
     }
 	
