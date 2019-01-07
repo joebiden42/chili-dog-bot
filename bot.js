@@ -58,9 +58,11 @@ client.on("message", async message => {
         var formattedDate = new Date(2000, date.getMonth(), date.getDate());
 
         for (var key in birthdays) {
-            console.log("key: " + key + "\ndate" + formattedDate);
+            console.log("key: " + key + "\ndate: " + formattedDate);
             if (key === formattedDate) {
+                console.log("MATCH");
                 const channel = message.guild.channels.find(channel => channel.name === "chat");
+                console.log(channel);
                 channel.send(birthdays[key]);
             }
         }
