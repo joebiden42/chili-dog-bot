@@ -1,13 +1,23 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
+
+const blk = new Date(2000, 2, 16);
+const omg = new Date(2000, 11, 20);
+const psy = new Date(2000, 1, 26);
+const fez = new Date(2000, 0, 7);
+const prl = new Date(2000, 2, 23);
+const joe = new Date(2000, 1, 14);
+const bam = new Date(2000, 6, 4);
+
 var birthdays = {
-    new Date(2000, 2, 16): "Happy birthday, @Blackniss#8574!",
-    new Date(2000, 11, 20): "Happy birthday, @omgnoodles#6244!",
-    new Date(2000, 1, 26): "Happy birthday, @Psycholiptic#6360!",
-    new Date(2000, 0, 7): "Happy birthday, @T-Fez#7603!",
-    new Date(2000, 2, 23): "Happy birthday, @pearl#4165!",
-    new Date(2000, 1, 14): "Happy birthday, @JoeBiden#7874!"
+    blk: "Happy birthday, @Blackniss#8574!",
+    omg: "Happy birthday, @omgnoodles#6244!",
+    psy: "Happy birthday, @Psycholiptic#6360!",
+    fez: "Happy birthday, @T-Fez#7603!",
+    prl: "Happy birthday, @pearl#4165!",
+    joe: "Happy birthday, @JoeBiden#7874!",
+    bam: "Happy birthday, @ы Bambata#4932!"
 };
 
 /*var dict = [];
@@ -54,7 +64,7 @@ client.on("message", async message => {
 	const command = args.shift().toLowerCase();
 
     if (command === "debug" && message.member.user.tag === "JoeBiden#7874") {
-        message.channel.send(date);
+        message.channel.send(date + "\n" + birthdays[joe]);
         return;
     }
 	
