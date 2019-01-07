@@ -13,13 +13,13 @@ const bam = new Date(2000, 6, 4);
 var date = new Date();
 
 const birthdays = {
-    blk: "Happy birthday, <@163692421845221376>!",
-    omg: "Happy birthday, <@210128801131134976>!",
-    psy: "Happy birthday, <@283349679809363969>!",
-    fez: "Happy birthday, <@194936061254828033>!",
-    prl: "Happy birthday, <@226457095224950784>!",
-    joe: "Happy birthday, <@346442977402683395>!",
-    bam: "Happy birthday, <@99599122083889152>!"
+    [blk]: "Happy birthday, <@163692421845221376>!",
+    [omg]: "Happy birthday, <@210128801131134976>!",
+    [psy]: "Happy birthday, <@283349679809363969>!",
+    [fez]: "Happy birthday, <@194936061254828033>!",
+    [prl]: "Happy birthday, <@226457095224950784>!",
+    [joe]: "Happy birthday, <@346442977402683395>!",
+    [bam]: "Happy birthday, <@99599122083889152>!"
 };
 
 /*var dict = [];
@@ -46,7 +46,7 @@ client.on("message", async message => {
     if (message.member.user.tag === "Blackniss#8574") {
         if (Math.round(Math.random()) * 100 === 69) {
             console.log("take the shot");
-            message.channel.send("@Blackniss#8574 slut");
+            message.channel.send("<@163692421845221376> slut");
             return;
         }
     }
@@ -58,7 +58,7 @@ client.on("message", async message => {
         var formattedDate = new Date(2000, date.getMonth(), date.getDate());
 
         for (var key in birthdays) {
-            console.log("key: " + 'key' + "\ndate" + formattedDate);
+            console.log("key: " + key + "\ndate" + formattedDate);
             if (key === formattedDate) {
                 const channel = message.guild.channels.find(channel => channel.name === "chat");
                 channel.send(birthdays[key]);
