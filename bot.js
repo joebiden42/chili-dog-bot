@@ -10,6 +10,8 @@ const prl = new Date(2000, 2, 23);
 const joe = new Date(2000, 1, 14);
 const bam = new Date(2000, 6, 4);
 
+var date = new Date();
+
 const birthdays = {
     blk: "Happy birthday, <@163692421845221376>!",
     omg: "Happy birthday, <@210128801131134976>!",
@@ -50,15 +52,18 @@ client.on("message", async message => {
     }
 
     // Listen I know this shouldn't run every message, I'll change it to amortized O(1) one day ok ok
-    var date = new Date();
-    var formattedDate = new Date(2000, date.getMonth(), date.getDate());
+    var today = new Date();
+    //if (date !== today) {
+        date = today;
+        var formattedDate = new Date(2000, date.getMonth(), date.getDate());
 
-    for (var key in birthdays) {
-        if (key === formattedDate) {
-            const channel = client.channels.find('name', 'general');
-            channel.send(birthdays[key]);
+        for (var key in birthdays) {
+            if (key === formattedDate) {
+                const channel = message.guild.channels.find(channel => channel.name === "chat");
+                channel.send(birthdays[key]);
+            }
         }
-    }
+    //}
 
 	if (message.content.indexOf(config.prefix) !== 0) return;
 
@@ -66,7 +71,7 @@ client.on("message", async message => {
 	const command = args.shift().toLowerCase();
 
     if (command === "debug" && message.member.user.tag === "JoeBiden#7874") {
-        message.channel.send(formattedDate + "\n" + fez);
+        message.channel.send(formattedDate + "\n" + fez) + "\n";
         return;
     }
 	
