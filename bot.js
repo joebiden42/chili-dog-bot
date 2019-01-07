@@ -10,7 +10,7 @@ const prl = new Date(2000, 2, 23);
 const joe = new Date(2000, 1, 14);
 const bam = new Date(2000, 6, 4);
 
-var birthdays = {
+const birthdays = {
     blk: "Happy birthday, @Blackniss#8574!",
     omg: "Happy birthday, @omgnoodles#6244!",
     psy: "Happy birthday, @Psycholiptic#6360!",
@@ -64,7 +64,10 @@ client.on("message", async message => {
 	const command = args.shift().toLowerCase();
 
     if (command === "debug" && message.member.user.tag === "JoeBiden#7874") {
-        message.channel.send(date + "\n" + birthdays[joe]);
+        message.channel.send(date + "\n" + birthdays['joe']);
+        for (var key in birthdays) {
+            console.log(birthdays[key]);
+        }
         return;
     }
 	
