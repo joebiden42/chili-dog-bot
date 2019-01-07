@@ -1,6 +1,14 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const config = require("./config.json")
+const config = require("./config.json");
+var birthdays = {
+    new Date(2000, 2, 16): "Happy birthday, @Blackniss#8574!",
+    new Date(2000, 11, 20): "Happy birthday, @omgnoodles#6244!",
+    new Date(2000, 1, 26): "Happy birthday, @Psycholiptic#6360!",
+    new Date(2000, 0, 7): "Happy birthday, @T-Fez#7603!",
+    new Date(2000, 2, 23): "Happy birthday, @pearl#4165!",
+    new Date(2000, 1, 14): "Happy birthday, @JoeBiden#7874!"
+};
 
 /*var dict = [];
 const users = message.guild.members;
@@ -22,11 +30,21 @@ client.on("message", async message => {
 	if (message.author.bot) return;
 
     if (message.member.user.tag === "Blackniss#8574") {
-        console.log("target in sight");
         if (Math.round(Math.random()) * 100 === 69) {
             console.log("take the shot");
             message.channel.send("@Blackniss#8574 slut");
             return;
+        }
+    }
+
+    // Listen I know this shouldn't run every message, I'll change it to amortized O(1) one day ok ok
+    var date = new Date();
+    var formattedDate = new Date(2000, date.getMonth(), date.getDate());
+
+    for (var key in birthdays) {
+        if (key === formattedDate) {
+            const channel = client.channels.find('name', 'general');
+            channel.send(birthdays[key]);
         }
     }
 
@@ -36,9 +54,7 @@ client.on("message", async message => {
 	const command = args.shift().toLowerCase();
 
     if (command === "debug" && message.member.user.tag === "JoeBiden#7874") {
-        console.log("i'm in");
-        var d = new Date();
-        message.channel.send(d.getDate());
+        message.channel.send(date);
         return;
     }
 	
