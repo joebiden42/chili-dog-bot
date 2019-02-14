@@ -58,6 +58,7 @@ client.on("message", async message => {
     var formattedDate = new Date(2000, date.getMonth(), date.getDate());
     var formattedToday = new Date(2000, today.getMonth(), today.getDate());
     if (formattedDate.getTime() !== formattedToday.getTime()) {
+	console.log("hello")
         date = today;
         for (var key in birthdays) {
             console.log(Date.parse(key));
@@ -74,7 +75,6 @@ client.on("message", async message => {
 	const command = args.shift().toLowerCase();
 
     if (command === "debug" && message.member.user.tag === "JoeBiden#7874") {
-        message.channel.send(formattedDate + "\n" + formattedToday) + "\n";
         for (var key in birthdays) {
             if (Date.parse(key) === formattedDate.getTime()) {
                 message.channel.send("there is a birthday");
