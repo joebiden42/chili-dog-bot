@@ -44,7 +44,9 @@ client.on("message", async message => {
 	if (message.author.bot) return;
 
     if (message.member.user.tag === "Blackniss#8574") {
-        if (Math.round(Math.random()) * 100 === 69) {
+	var num = Math.round(Math.random()) * 100;
+	console.log(num);
+        if (num === 69) {
             console.log("take the shot");
             message.channel.send("<@163692421845221376> slut");
             return;
