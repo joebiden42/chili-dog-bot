@@ -81,6 +81,8 @@ client.on("message", async message => {
 		return;
             }
         }
+	console.log(today);
+	console.log(date);
 	message.channel.send("no birthday aww");
     }
 	
