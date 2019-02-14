@@ -75,7 +75,13 @@ client.on("message", async message => {
 
     if (command === "debug" && message.member.user.tag === "JoeBiden#7874") {
         message.channel.send(formattedDate + "\n" + formattedToday) + "\n";
-        return;
+        for (var key in birthdays) {
+            if (Date.parse(key) === formattedDate.getTime()) {
+                message.channel.send("there is a birthday");
+		return;
+            }
+        }
+	message.channel.send("no birthday aww");
     }
 	
 	if (command === "commands") {
